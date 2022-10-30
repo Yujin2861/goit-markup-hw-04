@@ -381,7 +381,7 @@ ul {
     color:var(--title-text-color);
 }
 .team p {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.1875;
     text-align: center;
@@ -394,28 +394,39 @@ ul {
 .actions {
     display: flex;
     padding: 0;
-    margin: 0;
-    outline: 1px solid black;
+    
     list-style: none;
+    margin-right: 10px;
+    width: 206px;
+    height: 44px;
+    justify-content: space-between;
+    margin: 0 32px 30px;
 }
-.instagram {
-    display: block;
+
+.actions .link {
+    display: flex;
     padding: 0;
     border: none;   
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    background-color:var(--hero-text-color);
+    justify-content: center;
+    align-items: center;
 }
 
-.link-icon:hover {
-    fill: #2196F3;
+.actions .link:hover
+ {
+    background-color: #2196F3;  
 }
 .link-icon {
-    width: 20px;
-    height: 20px;
+    display: block;
     fill: #afb1b8;
     justify-content: center;
     align-items: center;  
+}
+.link-icon:hover {
+    fill: #FFFFFF;
 }
 
 /*ФУТЕР*/
