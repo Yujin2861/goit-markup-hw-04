@@ -404,7 +404,7 @@ ul {
 }
 
 .actions .link {
-    display: flex;
+    display: block;
     padding: 0;
     border: none;   
     width: 44px;
@@ -413,6 +413,7 @@ ul {
     background-color:var(--hero-text-color);
     justify-content: center;
     align-items: center;
+    color: #afb1b8;
 }
 
 .actions .link:hover
@@ -427,6 +428,7 @@ ul {
 }
 .link-icon:hover {
     fill: #FFFFFF;
+    
 }
 
 /*ФУТЕР*/
