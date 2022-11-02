@@ -10,6 +10,7 @@
     --team-bg-color: #F5F4FA;
     --hero-button-hover: #188CE8;
     --footer-link-color: rgba(255, 255, 255, 0.6);    
+    --svg-color: #afb1b8;
 }
 
 body {
@@ -120,7 +121,9 @@ ul {
 }
 
 .auth-nav .link {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
 
     color: var(--primery-text-color);
 
@@ -133,8 +136,19 @@ ul {
 .auth-nav .link:focus {
     color: var(--accent-color);
 }
-
-.auth-nav .link::before {
+.icon-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+.link-tell {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+/*.auth-nav .link::before {
     height: 16px;
     width: 16px;
     
@@ -151,7 +165,8 @@ ul {
 }
 .auth-nav .link.email::before {
     background-image: url(../images/img-hw4/Vector.svg);
-}
+}*/
+
 /*ГЕРОЙ*/
 
 .hero {
@@ -225,9 +240,6 @@ ul {
 }
 .button-filter {
     padding: 6px 22px;
-
-
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -245,6 +257,7 @@ ul {
 .button-filter:focus {
     background-color: var(--accent-color);
     color:var(--hero-text-color);
+    box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
 }
 
 /*заголовок ПЕРЕВАГИ ЗХОВАВ*/ 
@@ -267,24 +280,40 @@ ul {
 }
 .feature-list {
     display: flex;
-    gap: 30px;
+    margin-left: -30px;
+    /*gap: 30px;*/
     /*flex-wrap: wrap;*/
 }
+
+.feature-list .item {
+    margin-left: 30px;
+    width: calc((100% - 90px) / 4);
+}
+
+.box-feature {
+    background-color:var(--team-bg-color);
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-position: center;
+}
+
+/*
 .feature-list .item::before {
-    
     display: block;
     content: "";
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    /*background-image: url(../images/img-hw4/Group.svg);*/
+    /*background-image: url(../images/img-hw4/Group.svg);
     background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F5F4FA;
     border-radius: 4px;
 }
-
 .icon-details::before {
     background-image: url(../images/img-hw4/Group.svg);
 }
@@ -297,7 +326,7 @@ ul {
 .icon-technology::before {
     background-image: url(../images/img-hw4/astronaut.svg);
 }
-
+*/
 .feature-list .title {
     margin-bottom: 10px;
 
@@ -313,7 +342,6 @@ ul {
    
     font-size: 14px;
     line-height: 1.7143;
-    
     letter-spacing: 0.03em;
 }
 
@@ -350,25 +378,28 @@ ul {
     background-color:var(--team-bg-color);
 }
 
-.team {
+.team.list {
     display: flex; 
-    /*background-color: tomato;*/
+    margin-left: -30px;
+    /*list-style: none;*/
 } 
 
 .team .item {
+    margin-left: 30px;
+    /*flex-basis: calc(100% / 4 - 30px);*/
+    width: calc((100% - 90px) / 4);
+    text-align: center;
+
     background:var(--hero-text-color);
-/* material shadow v1 */
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-.team .item:not(:last-child) {
-    margin-right:30px;   
-}
+/*.team .item:not(:last-child) {
+    margin-right:30px;  */ 
 
 .team .title {
-    margin-top: 30px;
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -393,63 +424,99 @@ ul {
 
 .actions {
     display: flex;
-    padding: 0;
-    
-    list-style: none;
-    margin-right: 10px;
-    width: 206px;
-    height: 44px;
-    justify-content: space-between;
-    margin: 0 32px 30px;
+    justify-content: center;  
 }
-
-.actions .link {
+.action-item:not(:last-child) {
+    margin-right:10px;   
+}
+.cosiale-link {
     display: block;
-    padding: 0;
-    border: none;   
+    padding: 12px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color:var(--hero-text-color);
-    justify-content: center;
-    align-items: center;
-    color: #afb1b8;
+    color:var(--svg-color);
 }
 
-.actions .link:hover
- {
-    background-color: #2196F3;  
-}
 .link-icon {
-    display: block;
-    fill: #afb1b8;
-    justify-content: center;
-    align-items: center;  
+    fill: currentColor;
 }
-.link-icon:hover {
-    fill: #FFFFFF;
+.cosiale-link:hover {
+    background-color:var(--accent-color);
+    color:var(--hero-text-color);
+}
+
+.comand-box {
+    padding: 30px 32px;
+    background-color: var(--hero-text-color);
+}
+/*НАШИ КЛИЕНТЫ*/
+.box-clients {
+    display: flex;
+    justify-content: center; 
+    margin-left: -30px;
     
+}
+.box-clients .item {
+    width: calc((100% - 150px) / 6);
+    margin-left: 30px;
+}
+
+.client-link {
+    display: flex;
+    justify-content: center;
+    padding: 15px 31px;
+    border: 1px solid var(--svg-color);
+    border-radius: 4px;
+    color: inherit;
+}
+.client-icon {
+    fill: currentColor;
+}
+.client-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /*ФУТЕР*/
 .footer .logo {
     display: inline-block;
-    padding-top: 60px;
+    margin-bottom: 20px;
 }
 .footer {
+    display: flex;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     height: 252px;
     background-color:var(--hero-bg-color);
 }
+.container-footer {
+    display: flex;
+    padding: 60px 15px;
+    width: 1200px;
+}
+.contact {
+    margin-right: 70px;
+}
+.sociale {
+    padding-top: 12px;
+}
+
+.strong {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: var(--hero-text-color);
+}
 .footer-nav {
-    display: inline-block;
-    
-    margin-top: 20px;  
+    display: inline-block; 
 }
 .footer-nav .item:not(:last-child) {
     margin-bottom: 9px;
 }
 .footer-nav .link {
-    
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -458,7 +525,13 @@ ul {
     letter-spacing: 0.03em;
     color:var(--footer-link-color);
 }
-
+.footer .cosiale-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--hero-text-color);
+}
+footer .cosiale-link:hover {
+    background-color: var(--accent-color);  
+}
 .footer-nav .link:hover,
 .footer-nav .link:focus {
     color: var(--hero-text-color);
@@ -497,7 +570,11 @@ ul {
     /*margin-right: 30px;
     margin-bottom: 30px;*/
     /*background-color: tomato;*/
-    
+}
+.filter-list .item:hover,
+.filter-list .item:focus {
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 16%);
+
 }
 .filter-list .item:nth-child(3n){
     margin-right: 0;
