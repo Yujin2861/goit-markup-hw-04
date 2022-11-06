@@ -484,17 +484,19 @@ ul {
     margin-bottom: 20px;
 }
 .footer {
-    display: flex;
+    /*display: flex;
     width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    height: 252px;
+    height: 252px;*/
+    padding: 60px 0;
+
     background-color:var(--hero-bg-color);
 }
 .container-footer {
     display: flex;
-    padding: 60px 15px;
-    width: 1200px;
+    /*padding: 60px 15px;
+    width: 1200px;*/
 }
 .contact {
     margin-right: 70px;
